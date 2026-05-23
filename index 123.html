@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Разработка учебного программного модуля
+</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#140000;
+color:white;
+overflow-x:hidden;
+}
+
+/* Красивый фон */
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+
+background:
+radial-gradient(circle at top left,#ff0000,transparent 30%),
+radial-gradient(circle at bottom right,#700000,transparent 35%),
+linear-gradient(135deg,#1a0000,#300000,#4b0000);
+
+z-index:-1;
+}
+
+/* Главный экран */
+
+header{
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:20px;
+}
+
+.hero{
+width:90%;
+max-width:1200px;
+
+padding:60px;
+
+border-radius:30px;
+
+text-align:center;
+
+background:rgba(255,0,0,0.08);
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 0 40px rgba(255,0,0,0.5);
+}
+
+.hero h1{
+font-size:58px;
+
+margin-bottom:25px;
+
+color:#ff4d4d;
+}
+
+.hero p{
+font-size:22px;
+
+line-height:1.8;
+
+margin-bottom:40px;
+}
+
+/* Кнопки */
+
+.menu{
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+}
+
+.menu a{
+text-decoration:none;
+
+padding:15px 35px;
+
+border-radius:12px;
+
+background:linear-gradient(135deg,#ff0000,#990000);
+
+color:white;
+
+font-size:18px;
+
+transition:0.3s;
+}
+
+.menu a:hover{
+transform:translateY(-5px);
+
+box-shadow:0 10px 25px rgba(255,0,0,0.6);
+}
+
+/* Секции */
+
+.section{
+width:90%;
+
+max-width:1200px;
+
+margin:40px auto;
+
+padding:60px 40px;
+
+background:rgba(255,255,255,0.06);
+
+border-radius:30px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.section h2{
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:35px;
+
+color:#ff4d4d;
+}
+
+.section p{
+font-size:18px;
+
+line-height:1.8;
+}
+
+/* Карточки */
+
+.cards{
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+}
+
+.card{
+padding:30px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,0.08);
+
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+
+box-shadow:0 10px 25px rgba(255,0,0,0.5);
+}
+
+.card h3{
+margin-bottom:15px;
+
+color:#ff6666;
+}
+
+/* Таблица */
+
+table{
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:30px;
+
+background:white;
+
+color:black;
+
+border-radius:15px;
+
+overflow:hidden;
+}
+
+table th{
+background:#cc0000;
+
+color:white;
+}
+
+table th,
+table td{
+padding:18px;
+
+border:1px solid #ddd;
+}
+
+/* Список */
+
+ul{
+margin-top:20px;
+
+padding-left:25px;
+
+line-height:2;
+
+font-size:18px;
+}
+
+/* Подвал */
+
+footer{
+margin-top:40px;
+
+padding:50px 20px;
+
+text-align:center;
+
+background:#1a0000;
+}
+
+footer h2{
+margin-bottom:20px;
+
+color:#ff4d4d;
+}
+
+footer p{
+margin:10px 0;
+}
+
+/* Адаптация */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section h2{
+font-size:30px;
+}
+
+.menu{
+flex-direction:column;
+}
+
+.menu a{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<h1>
+Разработка учебного программного модуля
+по основам алгоритмизации
+</h1>
+
+<p>
+Современный дипломный веб-сайт для изучения
+алгоритмов, программирования и информационных технологий.
+</p>
+
+<div class="menu">
+
+<a href="#about">
+О проекте
+</a>
+
+<a href="#goals">
+Цели
+</a>
+
+<a href="#topics">
+Темы
+</a>
+
+<a href="#advantages">
+Преимущества
+</a>
+
+<a href="#contacts">
+Контакты
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section id="about" class="section">
+
+<h2>
+О проекте
+</h2>
+
+<p>
+Данный учебный программный модуль создан
+для студентов, преподавателей и начинающих программистов.
+Основной целью проекта является развитие
+алгоритмического мышления и изучение основ программирования.
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+Алгоритмы
+</h3>
+
+<p>
+Изучение линейных,
+циклических и разветвляющихся алгоритмов.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Программирование
+</h3>
+
+<p>
+Изучение HTML, CSS,
+Python, JavaScript и разработки приложений.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Практика
+</h3>
+
+<p>
+Практические задания,
+лабораторные работы и тестирование программ.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="goals" class="section">
+
+<h2>
+Цели и задачи
+</h2>
+
+<ul>
+
+<li>
+Развитие алгоритмического мышления.
+</li>
+
+<li>
+Освоение основ программирования.
+</li>
+
+<li>
+Изучение современных технологий.
+</li>
+
+<li>
+Развитие навыков решения задач.
+</li>
+
+<li>
+Подготовка к профессиональной деятельности в IT.
+</li>
+
+<li>
+Формирование практических навыков разработки программ.
+</li>
+
+</ul>
+
+</section>
+
+<section id="topics" class="section">
+
+<h2>
+Основные темы обучения
+</h2>
+
+<table>
+
+<tr>
+
+<th>
+Тема
+</th>
+
+<th>
+Описание
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+Алгоритмизация
+</td>
+
+<td>
+Создание и анализ алгоритмов.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Блок-схемы
+</td>
+
+<td>
+Графическое описание процессов.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Циклы
+</td>
+
+<td>
+Повторение действий через циклы.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Функции
+</td>
+
+<td>
+Создание повторно используемого кода.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Массивы
+</td>
+
+<td>
+Работа с коллекциями данных.
+</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section id="advantages" class="section">
+
+<h2>
+Преимущества сайта
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+Красивый дизайн
+</h3>
+
+<p>
+Современный красный стиль,
+анимации и стеклянный эффект.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Много информации
+</h3>
+
+<p>
+Теория, таблицы,
+карточки и практические задания.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Адаптивность
+</h3>
+
+<p>
+Сайт отлично работает
+на телефонах и компьютерах.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contacts">
+
+<h2>
+Контакты
+</h2>
+
+<p>
+Email: diploma@algorithm.com
+</p>
+
+<p>
+Телефон: +996 700 000 000
+</p>
+
+<p>
+© 2026 Дипломный проект
+</p>
+
+</footer>
+
+</body>
+</html>
